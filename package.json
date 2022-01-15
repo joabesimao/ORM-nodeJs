@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "init": "^0.1.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "npm": "^8.3.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.13.0"
+  },
+  "name": "api-curso-de-node2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
