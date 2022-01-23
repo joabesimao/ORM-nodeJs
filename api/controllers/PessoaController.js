@@ -54,6 +54,29 @@ class PessoaController {
       return res.status(500).json(error.message);
     }
   }
+  static async pegaUmaMatricula(req, res) {
+    const { estudanteId, matriculaId } = req.params;
+    try {
+      const umaMatricula = await database.Matriculas.findOne({
+        where: { id: Number(matriculaId), estudante_Id: Number(estudanteId) },
+      });
+      return res.status(200).json(umaMatricula);
+    } catch (error) {
+      res.status(500).json(error.message);
+    }
+  }
+  static async criaNovaMatricula(req, res) {
+    const { estudanteId } = req.body;
+    const novaMatricula = { ...req.body, estudante_id: Number(estudanteId) };
+    try {
+      const novaMatriculaCriada = await database.Matriculas.create(
+        novaMatricula
+      );
+      return res.status(200).json(novaMatriculaCriada);
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
+  }
 }
 
 module.exports = PessoaController;
