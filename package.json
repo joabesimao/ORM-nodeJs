@@ -5,9 +5,9 @@
     "init": "^0.1.2",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "npm": "^8.3.1",
+    "npm": "^8.3.2",
     "path": "^0.12.7",
-    "sequelize": "^6.13.0"
+    "sequelize": "^6.14.0"
   },
   "name": "api-curso-de-node2",
   "version": "1.0.0",
