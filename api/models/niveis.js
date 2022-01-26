@@ -1,5 +1,6 @@
 "use strict";
 const { Model } = require("sequelize");
+
 module.exports = (sequelize, DataTypes) => {
   class Niveis extends Model {
     /**
@@ -19,8 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       descr_nivel: DataTypes.STRING,
     },
+
     {
       sequelize,
+      paranoid: true,
       modelName: "Niveis",
     }
   );
