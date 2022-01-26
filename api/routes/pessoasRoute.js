@@ -16,6 +16,7 @@ router
     PessoaController.pegaUmaMatricula
   )
   .get("/pessoas/:estudanteId/matricula", PessoaController.pegaMatricula)
+  .get("/pessoas/matricula/lotada", PessoaController.pegaTurmaLotada)
   .post("/pessoas", PessoaController.criaPessoa)
   .post("/pessoas/:id/restaura", PessoaController.restauraPessoa)
   .post("/pessoas/:estudanteId/matriculas", PessoaController.criaNovaMatricula)
