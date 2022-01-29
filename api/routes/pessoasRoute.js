@@ -20,6 +20,7 @@ router
   .post("/pessoas", PessoaController.criaPessoa)
   .post("/pessoas/:id/restaura", PessoaController.restauraPessoa)
   .post("/pessoas/:estudanteId/matriculas", PessoaController.criaNovaMatricula)
+  .post("/pessoas/:estudanteId/cancela", PessoaController.cancelaPessoa)
   .put("/pessoas/:id", PessoaController.atualizaPessoa)
   .delete("/pessoas/:id", PessoaController.apagaPessoa);
 
