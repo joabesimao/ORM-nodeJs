@@ -22,7 +22,7 @@ class PessoasServices extends Services {
       await super.atualizaRegistro({ ativo: false }, estudanteId, {
         transaction: transacao,
       });
-      await this.matriculas.atualizaRegistro(
+      await this.matriculas.atualizaRegistros(
         { status: "cancelado" },
         { estudante_id: estudanteId },
         { transaction: transacao }

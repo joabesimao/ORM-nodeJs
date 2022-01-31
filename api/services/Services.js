@@ -32,6 +32,17 @@ class Services {
       transacao
     );
   }
+
+  async apagaRegistro(id) {
+    return database[this.nomeDoModelo].destroy({ where: { id: id } });
+  }
+
+  async encontraEContaRegistros(where = {}, agregadores) {
+    return database[this.nomeDoModelo].findAndCountAll({
+      where: { ...where },
+      ...agregadores,
+    });
+  }
 }
 
 module.exports = Services;
